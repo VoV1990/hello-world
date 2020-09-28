@@ -6,7 +6,7 @@ public class ShakerSortArray {
         int right = array.length - 1;
         int temp;
         do {
-            for (int i = left; i < array.length - 1; i++) {
+            for (int i = left; i < right; i++) {
                 if (array[i] > array[i + 1]) {
                     temp = array[i];
                     array[i] = array[i + 1];
@@ -14,7 +14,7 @@ public class ShakerSortArray {
                 }
             }
             left++;
-            for (int i = right; i > 0; i--) {
+            for (int i = right; i >= left; i--) {
                 if (array[i] < array[i - 1]) {
                     temp = array[i];
                     array[i] = array[i - 1];
